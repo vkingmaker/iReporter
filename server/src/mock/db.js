@@ -3,7 +3,7 @@ const records = () => {
     {
       id: 1,
       type: 'red-flag',
-      location:' 10.756575/9.844727',
+      location: '10.756575/9.844727',
       status: 'resolve',
       Images: '[Image,Image]',
       videos: '[video,video]',
