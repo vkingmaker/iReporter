@@ -1,0 +1,520 @@
+@font-face {
+    font-family: 'Bariol-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Bariol-Regular'), url('Bariol.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Bariol-Regular';
+    /* width: 100%;
+    height: 100%; */
+}
+.signUp{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+[type="radio"]:checked+label {
+    color:#fff;
+    background-color: #666;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    width:95%;
+    margin:0 auto;
+}
+
+header{
+    height:70px;
+    width:100%;
+    background-color:#fff;
+}
+.headerLinks{
+    list-style-type: none;
+    display: flex;flex-direction: row;
+    width:20%;
+    justify-content: space-around;padding:0;
+}
+
+.jumboThron {
+    background: url('../img/criminal.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    height:450px;
+    width:100%;
+}
+
+.jumboThron .mainThron{
+    height:80%;
+    width:100%;
+}
+.jumboThron .mainThron > div{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.jumboThron .mainThron  h1{
+    font-size:3rem;
+    color:#fff;
+    text-shadow:5px 5px 5px #000;
+}
+.jumboThron .decoThron{
+    height:20%;
+    width:100%;
+    background: linear-gradient(to bottom right,#666 49%,#fff 50%);
+}
+#map {
+    width: 80%;
+    height: 400px;
+    margin:0 auto;
+    background-color: grey;
+}
+
+h2.heading::before {
+    content: '';
+    display: inline-block;
+    /* background-color:purple; */
+    margin-right: 0.5em;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #666;
+    border-bottom: 8px solid transparent;
+}
+
+.txt-center{
+    text-align:center;
+}
+/************************************** SIGN IN ***************************************/
+section.signUp{
+    min-height:calc(100vh - 80px);
+    background:url('../img/crime.jpg') no-repeat;
+}
+
+.signInUpDesc{
+    border:1px solid #666;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInUpDesc > div{
+    border: 1px solid #666;
+    border-top:5px solid #666;
+    width:50%;
+    height:50%;
+    padding:1rem;
+    text-align: justify;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(255,255,255,0.8);
+}
+
+.signInUpForm{
+    border:1px solid #666;
+    background-color:rgba(255,255,255,0.4)
+}
+
+.signInUpForm > div{
+    width:90%;
+    margin:0 auto;
+    margin-top:6rem;
+ }
+.form-control{
+    width:100%;
+    display:flex;
+    align-content: center;
+}
+
+.form-control > div{
+    width:15%;
+    display:inline-block;
+    background-color:#666;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+
+.form-control > input{
+    width:85%;
+    display:inline-block;
+    height:30px;
+    margin-bottom:1rem;
+    padding-left:1em;
+    border-style:none;
+}
+.signInUpForm > div > button{
+    display:block;
+    width:100%;
+    height:30px;
+    background-color:#666;
+    color:#fff;
+    margin-bottom:1rem;
+    border-style:none;
+}
+.processed{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:rgba(128, 128, 128,.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100%;
+    width:100%;
+    z-index:400;
+}
+.processed > div{
+    width:90%;
+    padding:5rem;
+    background-color:#fff;
+    /* margin:auto; */
+}
+.close-button{
+    color:#666;
+    padding:6px;
+    /* background-color:#ce211a; */
+    display:block;
+    position:fixed;
+    display:flex;
+    justify-content: flex-end;
+    top:10px;
+    cursor: pointer;
+    left:65%;
+
+}
+/************************************** /SIGN IN ***************************************/
+
+/************************************** ADD & EDIT FORM *********************************/
+#iTitle{
+    margin-bottom:0.5rem;
+    width:100%;
+}
+#fullStory + div{
+    width:90%;
+    margin:0 auto;
+}
+#fullStory + div > input{
+width:100%;
+min-height:250px;
+}
+.addRedInv{
+    width:100%;
+    margin:0 auto;
+    display:none;
+}
+
+.addRedFlag{
+    font-size:1rem;
+    background-color:rgba(102,102,102,0.7);
+    color:#fff;
+    border-style:none;
+    padding:0.5rem 1rem;
+}
+.addRedInv > div{
+    width:40%;margin:0 auto;   
+}
+.addRedInv form select{
+    width:100%;
+    height:30px;
+    color:#464646;
+    margin-bottom:1rem;
+}
+.addRedInv form div{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:1rem;
+}
+.addRedInv form input{
+    display: inline-block;
+    width:49%;
+    height:30px;
+    padding-left:0.3rem;
+}
+.addRedInv form button{
+    height:30px;
+    color:#fff;
+    background-color:#666;
+    border-style:none;
+    margin-bottom:1rem;
+    min-width:80px;
+}
+.addRedInv form textarea{
+    padding:0.8rem;
+    width:100% !important;
+    margin-bottom:1rem;
+}
+
+.redInvAddBtn{
+    position:fixed;
+    top:80%;
+    left:85vw;
+    display:inline-flex;
+    flex-direction:column;
+}
+
+.redInvAddBtn > div{
+    display: flex;
+    /* flex-direction:column; */
+    justify-content: center;
+}
+
+.redInvAddBtn > div > a > i{
+    font-size:1.5rem;
+    color:#666 !important;
+    border:1.5px solid #666;
+    border-radius:50%;
+    background-color:#fff;
+    margin-bottom:0.2rem;
+    width:53px;
+    height:53px;
+}
+/************************************** /ADD & EDIT FORM *********************************/
+
+/************************************** FOOTER ******************************************/
+footer{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    background-color:#666;
+    align-items: center;
+    margin-top:4rem;
+    color:#fff;
+}
+/************************************** /FOOTER ******************************************/
+
+/************************************** BLOG ********************************************/
+.redIntPost{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 10px;
+    grid-auto-rows: minmax(200px,250px);
+}
+.redIntPost > div{
+    border:1px solid rgba(102,102,102,0.3);
+}
+.redIntPost > div > span{
+    display:block;
+    font-size:1rem;
+    text-transform:uppercase;
+    display:flex;
+    justify-content: center;
+    font-weight:bold;
+    padding: 0.5rem 0.3rem;
+    cursor: pointer;
+}
+.redIntPost img{
+    display:inline-block;
+    width:38%;height:100%;
+}
+.redIntPost p{
+    display:inline-block !important;
+}
+.redIntPost > div > div{
+    text-align:justify;
+    padding:0.6rem;
+}
+
+.redIntPost > div > div > div{
+    height:100px;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+.redIntPost > div > div > div > div{
+    display:inline-flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width:60%;height:100%;
+}
+
+.redIntPost > div > div > div > div > span:nth-child(1){
+    display:block;
+    font-weight:bold;
+    padding-left:0.3rem;
+    color:gray;
+}
+.redIntPost > div > div > div > div > span:nth-child(2){
+    display:block;
+    padding-left:0.3rem;
+    color:gray;
+}
+.redInvBlog{
+    width:80%;
+    margin:0 auto;
+    list-style-type: none;
+}
+
+.redInvBlog > li{
+    margin:2rem 0;
+}
+.redInvBlog > li > div{
+    width:95%;
+    border:1px solid #666;
+    min-height:150px;
+}
+
+.optionPanel{
+    min-height:20px;
+    display:block;
+    width:100%;
+    border-bottom:1px solid #666;
+    display:flex;
+    justify-content: space-between;
+}
+.optionA{
+    min-width:6%;
+    display:flex;
+    justify-content: space-around;
+    padding:0.6rem 0;
+}
+.optionB{
+    min-width:30%;
+}
+.optionB > div{
+    width:100%;
+    position: relative;
+}
+.optionB > div > div{
+    display:inline-block;
+    position: absolute;
+    top:36px;
+    left:43%;
+    background-color:#fff;
+}
+.optionB > div > div > input{
+    z-index:-2000;
+    display:none;
+}
+.optionB > div > div > label{
+    display:block;
+    padding:0.3rem;
+}
+.optionB > i{
+    position:relative;
+    left:90%;
+    padding:0.6rem 0;
+}
+.statusText{
+    display:inline-block;
+    width:100%;
+    position: absolute;
+    padding:0.6rem 0;
+}
+.blogComment > div > img{
+    width:70%;
+    margin:0 auto 1rem;
+    border:1px solid #666;
+    display:block;
+    max-height:300px;
+}
+.blogComment > p {
+    width:90%;
+    margin:1rem auto;
+    text-align: justify;
+}
+/************************************** /BLOG ********************************************/
+ /************************************* DETAILS *****************************************/
+ .iReport{
+    width:90%;
+    margin:0 auto;
+ }
+ #iDetails{
+     display:none;
+ }
+ .iReportdetail{
+    width:80%;
+    margin:0 auto;
+ }
+ .iReportdetail > div{
+    margin:2rem 0;
+ }
+ .iReportdetail > div > div{
+    width:100%;
+    border:1px solid #666;
+    min-height:150px;
+ }
+.blogDetailImg{
+    margin-top:2rem;
+}
+.blogDetailImg + p{
+    width:90%;
+    margin:1rem auto;
+    text-align:justify;
+}
+.blogDetailImg > img{
+    width:70%;
+    margin:0 auto 1rem;
+    border:1px solid #666;
+    display:block;
+    min-height:300px;
+}
+
+ /************************************* /DETAILS *****************************************/
+
+ /************************************* LANDING PAGE *****************************************/
+ .landingPage{
+     background-color:gray;
+     background:url('../img/criminal.jpg') no-repeat;
+     background-size:cover;
+     height: calc(100vh - 81px);
+     display:grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 1fr;
+ }
+ .landingPage > div{
+     /* background-color:rgba(102,102,102,.2); */
+ }
+ .landingPage > div > div{
+     background-color:rgba(255,255,255,0.9);
+ }
+ /************************************* /LANDING PAGE*****************************************/
+ /************************************* USER PAGE*****************************************/
+.userPanel{
+width:100%;
+border:1px solid #666;
+min-height: calc(100vh - 197px);
+display:grid;
+grid-template-columns: 250px 1fr;
+grid-template-rows:1fr;
+grid-template-areas: 
+" .sideMenu .mainView";
+}
+
+.sideMenu{
+    position: relative;
+    background-attachment: fixed;
+    border:1px solid #666;
+}
+.sideMenu > div{
+    padding:0 1rem;
+    margin-top:3rem;
+    font-size:1.3rem;
+}
+.sideMenu > div > span{
+    display:block;
+    margin-bottom:0.8rem;
+}
+.mainView{
+    border:1px solid #666;
+    padding-bottom:2rem;
+}
+
+ /************************************* /USER PAGE*****************************************/
