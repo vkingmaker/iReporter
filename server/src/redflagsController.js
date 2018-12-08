@@ -1,6 +1,6 @@
 import db from './mock/db';
 
-let records = db();
+const records = db();
 
 class RedflagsController {
   static getRecords(req, res) {
