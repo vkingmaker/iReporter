@@ -16,7 +16,7 @@
   "scripts": {
     "start": "npm run build && node app",
     "clean": "rimraf dist",
-    "build": "npm run clean && babel ./server/**/*.js --out-dir build --presets=es2015",
+    "build": "npm run clean && babel ./server/**/* --out-dir build --presets=es2015",
     "test": "npm run build && nyc mocha",
     "lint": "esw -w src test"
   },
