@@ -17,7 +17,7 @@
     "start": "npm run build && node app",
     "clean": "rimraf dist",
     "build": "npm run clean && babel ./server --out-dir build/server --presets=es2015",
-    "test": "npm run build && mocha",
+    "test": "npm run build && nyc mocha",
     "lint": "esw -w src test"
   },
   "dependencies": {
