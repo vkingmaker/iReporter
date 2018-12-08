@@ -8,6 +8,6 @@ node_js:
 before_script:
   - npm install n
   - sudo ./node_modules/.bin/n stable
-  -rm -rf ~/.nvm
+  - rm -rf ~/.nvm
 script:
   - npm run test
