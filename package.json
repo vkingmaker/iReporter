@@ -18,7 +18,8 @@
     "clean": "rimraf dist",
     "build": "npm run clean && babel ./server/src --out-dir build/server/src --presets=es2015",
     "test": "npm run build && _mocha",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "lint": "esw -w src test"
   },
   "dependencies": {
@@ -45,6 +46,7 @@
     "eslint-plugin-import": "^2.14.0",
     "istanbul": "^0.4.5",
     "mocha": "^2.4.5",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.12.1",
     "nyc": "^13.1.0",
     "supertest": "^3.0.0",
