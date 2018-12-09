@@ -1,4 +1,4 @@
-![ireporter](https://user-images.githubusercontent.com/18199741/49345953-e9e84300-f68b-11e8-8e5f-ee5bd746d0bc.PNG)
+[![Coverage Status](https://coveralls.io/repos/github/vkingmaker/iReporter/badge.svg?branch=develop)](https://coveralls.io/github/vkingmaker/iReporter?branch=develop)
 
 # iReporter
 > Let's fight against corruption and malpractices in our continent to a great extent.
