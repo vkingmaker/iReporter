@@ -7,9 +7,6 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 
-// /GET 
-// /api/v1/red-flags/:id
-
 describe('/GET/:id COMMENT', () => {
   it('should GET a comment by the given id', (done) => {
     const record = {
@@ -50,6 +47,23 @@ describe('/POST a comment', () => {
       .end((req, res) => {
         res.should.have.status(201);
         res.body.data[0].should.have.property('message').eql('Created red-flag-record!');
+        done();
+      });
+  });
+});
+describe('/PATCH a paticular comment', () => {
+  it('should Uupdate the comment of a particular record', (done) => {  
+    const record = {
+      id: 1,
+      comment: 'African can be great again! if only we can ensure individually',
+    };
+
+    chai.request(server)
+      .patch(`/api/v1/red-flags/${record.id}/comment`)
+      .send(record)
+      .end((req, res) =>{ 
+        res.should.have.status(200);
+        res.body.data[0].should.have.property('message').eql('Updated red-flag record\'s comment');
         done();
       });
   });
