@@ -4,5 +4,5 @@ import RedflagsController from './redflagsController';
 const router = express.Router();
 
 /* GET home page. */
-router.get('/red-flags', RedflagsController.getRecords);
+router.patch('/red-flags/:id/comment', RedflagsController.updateCommentGivenAnId);
 module.exports = router;
