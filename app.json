@@ -1,0 +1,6 @@
+{
+  "name": "iReport",
+  "description": "IReport API is a used to raise a red flag or intervention to fight crime and corruption in Africa.",
+  "repository": "https://github.com/vkingmaker/iReport.git",
+  "keywords": ["node", "express", "heroku","Andela","API","Babel"]
+}
