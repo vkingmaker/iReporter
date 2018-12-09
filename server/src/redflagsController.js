@@ -20,6 +20,12 @@ class RedflagsController {
         id: addedRecord.id,
         message: 'Created red-flag-record!',
       }],
+    })
+  }
+   static getRecords(req, res) {
+    res.send({
+      status: res.statusCode,
+      data: [...records],
     });
   }
 }
