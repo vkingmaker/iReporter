@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/vkingmaker/iReporter/badge.svg?branch=develop)](https://coveralls.io/github/vkingmaker/iReporter?branch=develop)
+[![Build Status](https://travis-ci.com/vkingmaker/iReporter.svg?branch=develop)](https://travis-ci.com/vkingmaker/iReporter)
 
 # iReporter
 > Let's fight against corruption and malpractices in our continent to a great extent.
@@ -46,25 +47,34 @@ When you run `npm run build` in your terminal, first of all the rimraf clears th
 
 ## Links
 
-Even though this information can be found inside the project on machine-readable
-format like in a .json file, it's good to include a summary of most useful
-links to humans using your project. You can include links like:
-
-- Project homepage: https://your.github.com/awesome-project/
-- Repository: https://github.com/your/awesome-project/
-- Issue tracker: https://github.com/your/awesome-project/issues
+- Project homepage: https://vkingmaker.github.io/iReporter/
+- Repository: https://github.com/vkingmaker/iReporter.git
+- Pivotal tracker: https://www.pivotaltracker.com/n/projects/2228058
   - In case of sensitive bugs like security vulnerabilities, please contact
-    my@email.com directly instead of using issue tracker. We value your effort
+    vkingmaker1@gmail.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
-- Related projects:
-  - Your other project: https://github.com/your/other-project/
-  - Someone else's project: https://github.com/someones/awesome-project/
 
 
 ## Licensing
 
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
+MIT License
 
-"The code in this project is licensed under MIT license."
+Copyright (c) 2018 vkingmaker
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
