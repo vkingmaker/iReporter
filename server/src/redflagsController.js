@@ -3,7 +3,23 @@ import db from './mock/db';
 const records = db();
 
 class RedflagsController {
-  static updateCommentGivenAnId(req, res) {
+ static updateLocationGivenAnId(req, res) {
+    const locationToUpdate = records.filter((value) => {
+      if (value.id === +req.params.id) {
+        return value;
+      }
+    });
+    locationToUpdate[0].location = req.body.location;
+    res.status(200).send({
+      status: res.statusCode,
+      data: [{
+        id: +req.params.id,
+        message: 'Updated red-flag record\'s location',
+      }],
+    });
+  }
+   
+    static updateCommentGivenAnId(req, res) {
     const recordToUpdate = records.filter((value) => {
       if (value.id === +req.params.id) {
         return value;
@@ -18,7 +34,7 @@ class RedflagsController {
       }],
     });
   }
-      
+
   static getRecordGivenAnId(req, res) {
     const particularRecord = records.filter((value) => {
       if (value.id === +req.params.id) return value;
@@ -50,7 +66,7 @@ class RedflagsController {
    static getRecords(req, res) {
     res.send({
       status: res.statusCode,
-      data: [...particularRecord],
+      data: [...records],
     });
   }
 
