@@ -8,18 +8,17 @@ let should = chai.should();
 chai.use(chaiHttp);
 
 
-// /GET 
+// /DELETE
 // /api/v1/red-flags
 
-describe('/GET all the records', () => {
-  it('it should GET all the comments', (done) => {
+describe('/DELETE comments', () => {
+  it('it should DELETE a all the records', (done) => {
     chai.request(server)
-      .get('/api/v1/red-flags')
+      .delete('/api/v1/red-flags')
       .end((err, res) => {
         res.should.have.status(200);
-        res.body.data.should.be.a('array');
-        res.body.data[0].should.include({ comment: 'Corruption in the system and the malpratices is just draining the life out of our lovely continent' });
-        res.body.data.length.should.be.eql(2);
+        res.body.should.be.a('object');
+        res.body.data[0].should.have.property('message').eql('multiple red-flag records deleted');
         done();
       });
   });
