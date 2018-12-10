@@ -7,10 +7,6 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 
-
-// /GET 
-// /api/v1/red-flags
-
 describe('/GET/:id COMMENT', () => {
   it('should GET a comment by the given id', (done) => {
     const record = {
@@ -86,6 +82,38 @@ describe('/PATCH a paticular location', () => {
       .end((req, res) =>{ 
         res.should.have.status(200);
         res.body.data[0].should.have.property('message').eql('Updated red-flag record\'s location');
+        done();
+      });
+  });
+});
+
+describe('/DELETE a paticular record', () => {
+  it('should delete a particular record given an id', (done) => {  
+    const record = {
+      id: 1,
+    };
+
+    chai.request(server)
+      .delete(`/api/v1/red-flags/${record.id}`)
+      .send(record)
+      .end((req, res) =>{ 
+        res.should.have.status(200);
+        res.body.data[0].should.have.property('message').eql('red-flag record has been deleted');
+        done();
+      });
+  });
+
+  it('should return an error message for wrong :id values', (done) => {  
+    const record = {
+      id: 4,
+    };
+
+    chai.request(server)
+      .delete(`/api/v1/red-flags/${record.id}`)
+      .send(record)
+      .end((req, res) =>{ 
+        res.should.have.status(400);
+        res.body.data[0].should.have.property('message').eql('there is no record with the specified id');
         done();
       });
   });
