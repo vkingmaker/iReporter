@@ -3,7 +3,7 @@ import RedflagsController from './redflagsController';
 
 const router = express.Router();
 
-/* GET home page. */
+router.delete('/red-flags', RedflagsController.clearRecord);
 router.delete('/red-flags/:id', RedflagsController.deleteRecordGivenAnId);
 router.patch('/red-flags/:id/location', RedflagsController.updateLocationGivenAnId);
 router.patch('/red-flags/:id/comment', RedflagsController.updateCommentGivenAnId);

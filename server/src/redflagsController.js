@@ -3,6 +3,16 @@ import db from './mock/db';
 const records = db();
 
 class RedflagsController {
+  static clearRecord(req, res) {
+    records.splice(0);
+    res.status(200).send({
+      status: res.statusCode,
+      data: [{
+        message: 'multiple red-flag records deleted',
+      }],
+    });
+  }
+  
  static deleteRecordGivenAnId(req, res) {
     let checkId = [];
     checkId = records.filter((value) => {
@@ -93,7 +103,9 @@ class RedflagsController {
    static getRecords(req, res) {
     res.send({
       status: res.statusCode,
-      data: [...records],
+      data: [{
+        message: 'multiple red-flag records deleted',
+      }],
     });
     if (checkId[0]) {
       records.splice(req.params.id - 1, 1);
