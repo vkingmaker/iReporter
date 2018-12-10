@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(logger('dev'));
 // Routes
-app.use('/api/v1', report);
+app.use('/api/v1/red-flags', report);
 
 // Catch 404 and forward to error handler
 // Error handler
