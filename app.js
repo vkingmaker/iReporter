@@ -2,7 +2,11 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 const report = require('./build/server/src/report');
+const intervention = require('./build/server/src/interventionRouter');
+
+dotenv.config();
 
 const app = express();
 
@@ -13,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(logger('dev'));
 // Routes
-app.use('/api/v1', report);
+app.use('/api/v1/red-flags', report);
+app.use('/api/v1/interventions', intervention);
 
 // Catch 404 and forward to error handler
 // Error handler
