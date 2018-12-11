@@ -4,6 +4,7 @@ import Verify from './verify';
 const bcrypt = require('bcryptjs');
 
 class InterventionController {
+    
   static signUp(req, res) {
     const userPattern = /[A-Za-z0-9]{2,}/;
     const passPattern = /.{6,}/;
