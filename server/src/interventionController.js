@@ -104,9 +104,17 @@ class InterventionController {
             });
           }
           if (hash === true) {
+            const userDetails = results.rows[0];
+            const user = {
+              firstname: userDetails.firstname,
+              lastname: userDetails.lastname,
+              othername: userDetails.lastname,
+              email: userDetails.email,
+              isAdmin: userDetails.isAdmin,
+              phonenumber: userDetails.phonenumber,
+            };
             const token = Verify.getToken({ email, admin: results.rows[0].admin });
-            const user = results.rows[0];
-            res.status(200).send({
+            res.header('x-auth', token).status(200).send({
               success: 'Login successful',
               data: [{
                 token,

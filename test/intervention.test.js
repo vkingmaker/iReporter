@@ -97,7 +97,18 @@ describe('/POST /api/v1/interventions', () => {
         res.should.have.status(201);
         res.body.data[0].should.have.property('id').eql(1);
         res.body.data[0].should.have.property('message').eql('Created intervention record');
-        done();
       });
+    done();
+  });
+});
+describe('/GET /api/v1/interventions', () => {
+  it('should retrieve all the interventions in the database', (done) => {
+    chai.request(server)
+      .get('/api/v1/interventions')
+      .end((err, res) => {
+        res.should.have.status(200);
+        // done();
+      });
+    done();
   });
 });
