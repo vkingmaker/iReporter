@@ -94,7 +94,7 @@ describe('/POST /api/v1/interventions', () => {
       .post('/api/v1/interventions')
       .send(incident)
       .end((err, res) => {
-        // res.should.have.status(201);
+        res.should.have.status(201);
         res.body.data[0].should.have.property('id').eql(1);
         res.body.data[0].should.have.property('message').eql('Created intervention record');
         done();
