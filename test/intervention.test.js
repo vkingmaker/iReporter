@@ -19,11 +19,7 @@ before((done) => {
         if (er) {
           throw new Error('an error occured while trying to communicate with the database');
         } else {
-          console.log(results);
-          console.log('ABOVE RESULT');
-          console.log(results.rows[0]);
           customeToken = Verify.getToken(results.rows[0]);
-          console.log('BEFOREEEEEEEEEE');
           done();
         }
       });
@@ -32,7 +28,6 @@ before((done) => {
 });
 
 describe('Parent test block for Intervention', () => {
-  // let myToken = token;
   it('it should test the users signup credentials', (done) => {
     const user = {
       firstname: 'Monday',
@@ -63,9 +58,7 @@ describe('Parent test block for Intervention', () => {
         done();
       });
   });
-  // });
 
-  // describe('/POST /api/v1/interventions/auth/login', () => {
   it('should compare the email and password provided by the user to ensure he or she is registered', (done) => {
     const user = {
       email: 'otti.onyeukwu@gmail.com',
@@ -87,9 +80,7 @@ describe('Parent test block for Intervention', () => {
         done();
       });
   });
-  // });
 
-  // describe('/POST /api/v1/interventions', () => {
   it('should create new interventions when the user inputs the require details', (done) => {
     const incident = {
       createdBy: 1,
@@ -103,7 +94,6 @@ describe('Parent test block for Intervention', () => {
       .set('x-auth', customeToken)
       .send(incident)
       .end((err, res) => {
-        console.log('GHHHHHHHHHHHHHHHHHHH');
         if (err) {
           throw new Error(err);
         }
@@ -128,9 +118,7 @@ describe('Parent test block for Intervention', () => {
         done();
       });
   });
-  // });
 
-  // describe('/GET/:id /api/v1/interventions/:id', () => {
   it('should retrive an intervention of a given id', () => {
     chai.request(server)
       .get('/api/v1/interventions/1')
