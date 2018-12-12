@@ -200,7 +200,6 @@ class InterventionController {
   static updateLocationById(req, res) {
     const { id } = req.params;
     const { location } = req.body;
-    console.log(+id);
     client.query('UPDATE incident_tbl SET (location,modifiedon) = ($1,CURRENT_DATE) WHERE id = $2 RETURNING (id)', [location, +id], (err, result) => {
       if (err) {
         res.status(400).send({
@@ -208,8 +207,6 @@ class InterventionController {
           error: err,
         });
       } else {
-        console.log('result');
-        console.log(result.rows[0].id);
         res.status(200).send({
           status: res.statusCode,
           data: [{
