@@ -177,6 +177,52 @@
                 </form>
             </div>
         </section>
+        <section class="addRedInv processed" id="editInv">
+            <span class="close-button" id="closeEINVBtn"><i class="fa fa-times" ></i></span>
+            <div>
+                <h2 class="heading txt-center">EDIT INTERVENTION</h2>
+                <form action="">
+                    <!-- Title -->
+                    <input type="text" name="title" id="iTitle" placeholder="TITLE">
+                    <!-- location/Lat-Long -->
+                    <div>
+                        <input type="text" placeholder="LONGITUDE">
+                        <input type="text" placeholder="LONGITUDE">
+                    </div>
+
+                    <!-- files -->
+                    <input type="file" id="inputFileToLoad" name="files[]" multiple />
+        
+                    <textarea name="" id="" rows="10" placeholder="COMMENT"></textarea>
+                    <!-- comment -->
+                    <!-- <button>BACK</button> -->
+                    <button>EDIT</button>
+                </form>
+            </div>
+        </section>
+        <section class="addRedInv processed" id="deleteInv">
+            <span class="close-button"><i class="fa fa-times" id="closeDInvBtn"></i></span>
+            <div>
+                <h2 class="heading txt-center">DELETE INTERVENTION</h2>
+                <form action="">
+                    <!-- Title -->
+                    <input type="text" name="title" id="iTitle" placeholder="TITLE" disabled>
+                    <!-- location/Lat-Long -->
+                    <div>
+                        <input type="text" placeholder="LONGITUDE" disabled>
+                        <input type="text" placeholder="LONGITUDE" disabled>
+                    </div>
+
+                    <!-- files -->
+                    <!-- <input type="file" id="inputFileToLoad" name="files[]" multiple  disabled/> -->
+        
+                    <textarea name="" id="" rows="10" placeholder="COMMENT" disabled></textarea>
+                    <!-- comment -->
+                    <!-- <button>BACK</button> -->
+                    <button>DELETE</button>
+                </form>
+            </div>
+        </section>
         <section class="addRedInv processed" id="addIntervention">
             <span class="close-button"><i class="fa fa-times" id="closeIVBtn"></i></span>
             <div>
@@ -213,8 +259,8 @@
                     <div>
                         <div class="optionPanel">
                             <div class="optionA">
-                                <i class="fa fa-pencil-square-o"></i>
-                                <i class="fa fa-trash-o"></i>
+                                <i class="fa fa-pencil-square-o" id="editIntn"></i>
+                                <i class="fa fa-trash-o" id="delIntn"></i>
                             </div>
                             <div class="optionB">
                                 <div>
@@ -227,13 +273,6 @@
                                 <img alt="" id="blogImage">
                             </div>
                             <p id="fullStory"></p>
-                            <div style="width:90%;margin:0 auto;">
-                                <input type="textarea" style="width:100%;min-height:250px;"> 
-                                <div>
-                                    <input type="text" placeholder="LONGITUDE">
-                                    <input type="text" placeholder="LONGITUDE">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

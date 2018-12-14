@@ -5,12 +5,40 @@
     const addIntervention = document.querySelector('#addIntervention');
     // const addInterventionBtn = document.querySelector('[class*="exclamation-triangle"]');
     const closeRFBtn = document.querySelector('#closeRFBtn');
+    const editBtn = document.querySelector('.fa-pencil-square-o');
     const closeIVBtn = document.querySelector('#closeIVBtn');
     const addRedFlag = document.querySelector('#addRedFlag');
+    const closeERFBtn = document.querySelector('#closeERFBtn');
+    const closeDRFBtn = document.querySelector('#closeDRFBtn');
+    const closeDInvBtn = document.querySelector('#closeDInvBtn');
+    const editIntn = document.querySelector('#editIntn');
+    const delIntn = document.querySelector('#delIntn');
+    const closeEINVBtn = document.querySelector('#closeEINVBtn');
     const iDetails = document.querySelector('#iDetails');
 
+   if(editIntn) {
+    editIntn.addEventListener('click',()=>{
+        document.querySelector('#editInv').style.display = 'block';
+   });
+   closeEINVBtn.addEventListener('click',(e)=>{
+       e.preventDefault();
+       document.querySelector('#editInv').style.display = 'none';
+   });
+   }
+   if(delIntn){
+    delIntn.addEventListener('click',()=>{
+        document.querySelector('#deleteInv').style.display = 'block';
+   });
+  
+   }
+if(closeDInvBtn) {
+   closeDInvBtn.addEventListener('click',() => {
+    document.querySelector('#deleteInv').style.display = 'none';
+   });
+}
+  
+  
 
-    // 
     redIntPostHeading.addEventListener('click',(e)=>{
         if(e.target.parentElement.parentElement.className === 'redIntPost'){
             document.querySelector('.heading').style.display = 'none';
@@ -39,25 +67,53 @@
         }
     });
 
+    if(document.querySelector('#editRedFlag')){
     iDetails.addEventListener('click',(e)=>{
         if(e.target.className.endsWith('fa-pencil-square-o')){
-            console.log('You can edit here Really');
+            // console.log(document.querySelector('#editRedFlag'))
+            document.querySelector('#editRedFlag').style.display = 'block';
+            // document.querySelector('#editInv').style.display = 'block';
         }
     });
+}
+if(document.querySelector('#deleteRedFlag')){
+    iDetails.addEventListener('click',(e)=>{
+        if(e.target.className.endsWith('fa-trash-o')){
+            // console.log(document.querySelector('#deleteRedFlag'))
+            document.querySelector('#deleteRedFlag').style.display = 'block';
+            // document.querySelector('#editInv').style.display = 'block';
+        }
+    });
+}
 
     addRedFlagBtn.addEventListener('click',(e)=>{
         console.log('ADD RED FLAG');
         e.preventDefault();
         addRedFlag.style.display = 'block';
     });
+    if(closeRFBtn) {
     closeRFBtn.addEventListener('click',(e)=>{
         e.preventDefault();
         addRedFlag.style.display = 'none';
     });
+    }
     closeIVBtn.addEventListener('click',(e)=>{
         e.preventDefault();
         addIntervention.style.display = 'none';
     });
+    if(closeERFBtn){
+    closeERFBtn.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('#editRedFlag').style.display = 'none';
+    });
+}
+if(closeDRFBtn) {
+    closeDRFBtn.addEventListener('click',(e)=>{
+        e.preventDefault();
+        document.querySelector('#deleteRedFlag').style.display = 'none';
+    });
+}
+    
     // addInterventionBtn.addEventListener('click',(e)=>{
     //     e.preventDefault();
     //     addIntervention.style.display = 'block';

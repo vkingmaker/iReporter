@@ -177,6 +177,52 @@
                 </form>
             </div>
         </section>
+        <section class="addRedInv processed" id="editRedFlag">
+            <span class="close-button"><i class="fa fa-times" id="closeERFBtn"></i></span>
+            <div>
+                <h2 class="heading txt-center">EDIT RED FLAG</h2>
+                <form action="">
+                    <!-- Title -->
+                    <input type="text" name="title" id="iTitle" placeholder="TITLE">
+                    <!-- location/Lat-Long -->
+                    <div>
+                        <input type="text" placeholder="LONGITUDE">
+                        <input type="text" placeholder="LONGITUDE">
+                    </div>
+
+                    <!-- files -->
+                    <input type="file" id="inputFileToLoad" name="files[]" multiple />
+        
+                    <textarea name="" id="" rows="10" placeholder="COMMENT"></textarea>
+                    <!-- comment -->
+                    <!-- <button>BACK</button> -->
+                    <button>EDIT</button>
+                </form>
+            </div>
+        </section>
+        <section class="addRedInv processed" id="deleteRedFlag">
+            <span class="close-button"><i class="fa fa-times" id="closeDRFBtn"></i></span>
+            <div>
+                <h2 class="heading txt-center">DELETE RED FLAG</h2>
+                <form action="">
+                    <!-- Title -->
+                    <input type="text" name="title" id="iTitle" placeholder="TITLE" disabled>
+                    <!-- location/Lat-Long -->
+                    <div>
+                        <input type="text" placeholder="LONGITUDE" disabled>
+                        <input type="text" placeholder="LONGITUDE" disabled>
+                    </div>
+
+                    <!-- files -->
+                    <!-- <input type="file" id="inputFileToLoad" name="files[]" multiple  disabled/> -->
+        
+                    <textarea name="" id="" rows="10" placeholder="COMMENT" disabled></textarea>
+                    <!-- comment -->
+                    <!-- <button>BACK</button> -->
+                    <button>DELETE</button>
+                </form>
+            </div>
+        </section>
         <section class="addRedInv processed" id="addIntervention">
             <span class="close-button"><i class="fa fa-times" id="closeIVBtn"></i></span>
             <div>
@@ -200,7 +246,7 @@
                     <button>UPLOAD A VIDEO</button>
                     <textarea name="" id="" rows="10" placeholder="COMMENT"></textarea>
                     <!-- comment -->
-                    <button>BACK</button>
+                    <!-- <button>BACK</button> -->
                     <button>ADD</button>
                 </form>
             </div>
@@ -227,13 +273,6 @@
                                 <img alt="" id="blogImage">
                             </div>
                             <p id="fullStory"></p>
-                            <div>
-                                <input type="textarea"> 
-                                <div>
-                                    <input type="text" placeholder="LONGITUDE">
-                                    <input type="text" placeholder="LONGITUDE">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
